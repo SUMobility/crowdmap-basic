@@ -11,25 +11,25 @@
   <body>
     <div id="wrapper">
       <div id="header">
-        <h1>Leaflet Draw  Collection Tool</h1>
+        <h1>Leaflet Draw Collection Tool</h1>
       </div>
       <div id="map"></div>
       <div id="controls">
-        <p>Click points for more information, or add your own.</br></p>
+        <p>Click points for more information, or add your own.<br></p>
         <input type="button" onclick="startEdits()" value="Click to Start Editing">
         <input type="button" onclick="stopEdits()" value="Stop Your Editing Session"><br>
         <div id="credits"><p>&copy;2015, Mike Foster and Raphael Dumas</p></div>
       </div>
     </div>
 
-    <div id="dialog" title="Tell us About this Drawing">     
+    <div id="dialog" title="Tell us about this location">     
       <form>
         <fieldset style="border: none;">
           <ul style="list-style-type: none; padding-left: 0px">
             <li><label for="username">Your Name</label></li>
             <li><input type="text" name="username" id="username" placeholder="Enter your name" class="text ui-widget-content ui-corner-all"></li>
             <li><label for="description">About this</label></li>
-            <li><input type="text" name="description" id="description" placeholder="Description for this point" class="text ui-widget-content ui-corner-all"></li>
+            <li><input type="text" name="description" id="description" placeholder="Why should we put one here?" class="text ui-widget-content ui-corner-all"></li>
           </ul>
           <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
         </fieldset>
@@ -46,15 +46,15 @@
 
 		//TODO: Change to your username, insert function on cartodb, and cartodb tablename
 		var config = {
-			cartoDBusername : "raphaeld",
+			cartoDBusername : "murcoiichi",
 			cartoDBinsertfunction : "insert_crowd_mapping_data",
-			cartoDBtablename : "crowdmap_basic",
-			mapcenter: [42.381899, -71.122499],
+			cartoDBtablename : "sharemap_basic",
+			mapcenter: [34.05, -118.25], 
 			drawOptions: {
 				draw : {
-					polygon : true,
-					polyline : true,
-					rectangle : true,
+					polygon : false,
+					polyline : false,
+					rectangle : false,
 					/*Circles aren't supported by the GeoJSON spec, so won't get sent to the database properly. 
 					*http://stackoverflow.com/a/16944309/4047679
 					*/
