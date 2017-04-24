@@ -75,15 +75,15 @@
 
 
 		// Create Leaflet map object
-		var map = L.map('map', { center: config.mapcenter, zoom: 13});
+		var map = L.map('map', { center: config.mapcenter, zoom: 15});
 		// Add Tile Layer basemap
 		// Find your own at https://leaflet-extras.github.io/leaflet-providers/preview/
-		var Hydda_Full = L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		var HikeBike_HikeBike = L.tileLayer('https://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		});
 
-		Hydda_Full.addTo(map);
+		HikeBike_HikeBike.addTo(map);
 
 		//Fetches
 		var getData = "https://" + config.cartoDBusername + ".carto.com/api/v2/sql?format=GeoJSON&q=" + sqlQuery;
