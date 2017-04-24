@@ -50,6 +50,7 @@
 			cartoDBinsertfunction : "insert_crowd_mapping_data",
 			cartoDBtablename : "sharemap_basic",
 			mapcenter: [34.057, -118.2764], 
+			zoom: 15,
 			drawOptions: {
 				draw : {
 					polygon : false,
@@ -77,7 +78,7 @@
 
 
 		// Create Leaflet map object
-		var map = L.map('map', { center: config.mapcenter, zoom: 15});
+		var map = L.map('map').setView(config.mapcenter, config.zoom);
 		// Add Tile Layer basemap
 		// Find your own at https://leaflet-extras.github.io/leaflet-providers/preview/
 		var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
