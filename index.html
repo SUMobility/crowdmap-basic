@@ -2,7 +2,7 @@
 <!--Based on https://github.com/mjfoster83/web-map-workshop/blob/master/7_advancedMapping_CartoDB/index-completed.html-->
 <html>
   <head>
-    <title>Leaflet to CartoDB - Point Collection Tool Beta</title>
+    <title>Bikeshare location crowdmap</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.0/leaflet.draw.css"/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -11,14 +11,14 @@
   <body>
     <div id="wrapper">
       <div id="header">
-        <h1>Leaflet Draw Collection Tool</h1>
+        <h1>Where should we put bikeshare?</h1>
       </div>
       <div id="map"></div>
       <div id="controls">
         <p>Click points for more information, or add your own.<br></p>
-        <input type="button" onclick="startEdits()" value="Click to Start Editing">
-        <input type="button" onclick="stopEdits()" value="Stop Your Editing Session"><br>
-        <div id="credits"><p>&copy;2015, Mike Foster and Raphael Dumas;</p></div>
+        <input type="button" onclick="startEdits()" value="Start Editing">
+        <input type="button" onclick="stopEdits()" value="Finish Editing"><br>
+	      <div id="credits">&copy;2017, <a href="https://sharedusemobilitycenter.org">Shared-Use Mobility Center</a></div>
       </div>
     </div>
 
